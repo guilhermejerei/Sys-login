@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="css/import.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+<div class="modal_overlay" id="modal-esqueci"> 
+    <div class="modal">
+        <h2>Recuperar senha</h2>
+        <p>Digite seu email e enviaremos um link para redefinir sua senha.</p>
+        <input type="email" id="email-esqueci" placeholder="Seu email">
+        <p class="erro" id="erro-esqueci"></p>
+        <div class="modal_botoes">
+            <button id="botao-enviar-esqueci">Enviar link</button>
+            <button id="fechar-modal">Cancelar</button>
+        </div>
+    </div>
+</div>
+<div class="notificacao_" id="notificacao"></div>
+
+    <div class="telas">
+        <div class="tela_login">
+            <div class="tela_ visivel" id="login">
+                <form action=""> <h1>Login</h1>
+                    <div> <input type="email" name="email" id="email-input" placeholder="Email"> </div>
+                    <div> <input type="password" name="senha" id="senha-input" placeholder="Senha"> </div>
+                    <div class="link_para_registro"> <p> Não possui uma conta? <a href="#Registro" id="direcionar-registro"> Registrar-se</a> </p> </div>
+                    <div> <a href="pages/dashboard.html"> <button type="submit" id="botao-login">Entrar</button> </a> </div>
+                    <div class="link_esqueceu_senha"> <a href="#" id="direcionar-esqueci">Esqueceu sua senha?</a> </div>
+                
+                </form>
+            </div>
+        </div>
+        <div class="tela_registro">
+            <div class="tela_" id="registro">
+                <form action=""> <h1>Criar Conta</h1>
+                    <div> <input type="text" name="nome-usuario" id="usuario-registro" placeholder="Usuário"> </div>
+                    <div> <input type="email" name="email" id="email-registro" placeholder="Email"> </div>
+                    <div class="campo"> <input type="password" name="senha" id="senha-registro" placeholder="Senha"> <span class="material-symbols-outlined icone" id="lock">lock</span> </div>
+                    <div class="campo"> <input type="password" name="senha" id="rp-senha-registro" placeholder="Confirmar senha"> <span class="material-symbols-outlined icone" id="rp-lock">lock</span> </div>
+                    <div> <p class="erro" id="erro-notificacao"></p></div>
+                    <div>
+                        <button class="btn_criar" type="submit" id="botao-criar">Criar</button>
+                        <button class="btn_retorno" type="submit" id="botao-retorno">Retornar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <div class="mini_player" id="mini-player">
+        <div class="mini_player_icone" id="mini-player-icone">
+            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <rect x="3" y="21" width="22" height="3" rx="9" fill="#6e3117"/>
+                <path d="M5 10 h18 l-2 12 H7 Z" fill="#7a3a1e"/>
+                <path d="M20 13 Q26 12 25 17 Q24 20 20 18" stroke="#7a3a1e" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path class="fumaca fumaca1" d="M9 7 Q8 5 9 3"/>
+                <path class="fumaca fumaca2" d="M14 7 Q13 5 14 3"/>
+                <path class="fumaca fumaca3" d="M19 7 Q18 5 19 3"/>
+            </svg>
+        </div>
+
+        <div class="mini_player_info">
+            <div class="player_topo">
+                <div class="pontinhos_deco pausado">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span>Música</span>
+                <button id="musica-pause" class="material-symbols-outlined">pause</button>
+            </div>
+            <div class="volume">
+                <span class="material-symbols-outlined" id="volume-icone">volume_down</span>
+                <input type="range" min="0" max="100" value="10" id="volume-controle">
+                <span id="volume-valor">10%</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/validator@13.11.0/validator.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

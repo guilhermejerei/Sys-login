@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="../css/import.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <div class="telas">
+        <div class="tela_ visivel" id="redefinir-card">
+            <form action="">
+                <h1>Redefinir</h1>
+                <div class="campo">
+                    <input type="password" id="nova-senha" placeholder="Nova senha">
+                    <span class="material-symbols-outlined icone" id="lock-redefinir">lock</span>
+                </div>
+                <div class="campo">
+                    <input type="password" id="rp-nova-senha" placeholder="Confirmar senha">
+                    <span class="material-symbols-outlined icone" id="rp-lock-redefinir">lock</span>
+                </div>
+                <div> <p class="erro" id="erro-redefinir"></p> </div>
+                <div> <button class="botao_redefinir" type="submit" id="botao-redefinir">Redefinir senha</button> </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/redefinir_senha.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+.mini_player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: var(--cor-principal);
+    border: 2px solid var(--cor-borda);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 3px 3px 0px var(--cor-sombra);
+    cursor: pointer;
+}
+
+.mini_player.aberto {
+    width: 280px;
+}
+
+.mini_player_icone {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mini_player_icone svg {
+    width: 26px;
+    height: 26px;
+    overflow: visible;
+}
+
+.mini_player_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.2s;
+    padding-right: 8px;
+    padding-left: 4px;
+    min-width: 0;
+}
+
+.mini_player.aberto .mini_player_info {
+    opacity: 1;
+}
+
+.player_topo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pontinhos_deco {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.pontinhos_deco span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--cor-borda-escura);
+    animation: pulsar 1.2s infinite;
+}
+
+.pontinhos_deco span:nth-child(2) { animation-delay: 0.4s; }
+.pontinhos_deco span:nth-child(3) { animation-delay: 0.8s; }
+
+.pontinhos_deco.pausado span {
+    animation-play-state: paused;
+}
+
+.player_topo span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--cor-texto);
+    flex: 1;
+}
+
+#musica-pause {
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-size: 16px;
+    color: var(--cor-texto);
+    margin-right: 2px;
+    margin-top: 5px;
+    background: rgba(64,35,25,0.12);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#musica-pause:hover {
+    background: rgba(64,35,25,0.25);
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.volume .material-symbols-outlined {
+    font-size: 14px;
+    color: var(--cor-icone);
+    cursor: pointer;
+}
+
+#volume-controle {
+    flex: 1;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(to right, var(--cor-borda-escura) 0%, var(--cor-borda-escura) 10%, rgba(64,35,25,0.2) 10%);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+}
+
+#volume-controle::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--cor-fundo);
+    border: 2px solid var(--cor-borda-escura);
+    cursor: pointer;
+}
+
+#volume-valor {
+    font-size: 9px;
+    color: var(--cor-icone);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.fumaca {
+    stroke: var(--cor-xcara);
+    stroke-width: 2;
+    stroke-linecap: round;
+    fill: none;
+    opacity: 0;
+}
+
+.fumaca1 { animation: vapor 2s ease-in-out infinite; }
+.fumaca2 { animation: vapor 2s ease-in-out infinite 0.6s; }
+.fumaca3 { animation: vapor 2s ease-in-out infinite 1.2s; }

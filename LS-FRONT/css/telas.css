@@ -1,0 +1,191 @@
+.tela_ {
+    display: none;
+}
+
+.tela_.visivel {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-width: 320px;
+    min-height: 400px;
+    background-color: var(--cor-principal);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: aparecer 0.25s ease;
+    box-shadow: 12px 12px 0px var(--cor-sombra), 16px 16px 6px rgba(0, 0, 0, 0.15);
+}
+
+.telas h1 {
+    width: 50%;
+    font-weight: bold;
+    color: var(--cor-principal);
+    text-align: center;
+    font-size: 26px;
+    background-color: var(--cor-fundo);
+    border-radius: 14px;
+    border: 2px inset #d99b77d7;
+    margin-left: 25%;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.telas input {
+    position: relative;
+    font-size: 14px;
+    width: 70%;
+    height: 30px;
+    margin-left: 15%;
+    padding-left: 2%;
+    background-color: var(--cor-input);
+    border-radius: 4px;
+    border: 3px inset var(--cor-principal);
+    margin-bottom: 18px;
+    color: var(--cor-texto);
+    transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+.telas input:focus {
+    outline: 2px solid var(--cor-borda-escura);
+    outline-offset: 1px;
+    border-color: var(--cor-borda-escura);
+}
+
+.campo {
+    position: relative;
+}
+
+.icone {
+    position: absolute;
+    left: 76%;
+    top: 7%;
+    cursor: pointer;
+    color: #40231996;
+}
+
+.icone:hover {
+    transition-duration: 0.2s;
+    color: var(--cor-borda-escura);
+}
+
+.telas p {
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    color: var(--cor-texto);
+}
+
+.link_para_registro {
+    text-align: center;
+}
+
+.link_para_registro a {
+    font-size: 14px;
+    color: var(--cor-borda-escura);
+    text-decoration: none;
+}
+
+.link_esqueceu_senha {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.link_esqueceu_senha a {
+    text-decoration: none;
+}
+
+.telas a {
+    color: var(--cor-borda-escura);
+}
+
+.telas a:hover {
+    color: #af3c16;
+}
+
+.tela_login button,
+.botao_redefinir {
+    width: 50%;
+    margin-left: 25%;
+    height: 36px;
+    background-color: var(--cor-input);
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    border: 1px solid var(--cor-borda-botao);
+    margin-top: 100px;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.botao_confirmar{
+    width: fit-content;
+    height: 36px;
+    background-color: var(--cor-input);
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    border: 1px solid var(--cor-borda-botao);
+    margin-top: 150px;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.tela_registro .btn_criar,
+.tela_registro .btn_retorno {
+    width: 45%;
+    margin: 0;
+}
+
+.tela_registro form > div:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tela_registro button {
+    width: auto;
+    background-color: var(--cor-input);
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    border: 1px solid var(--cor-borda-botao);
+    margin-top: 20px;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.telas button:not(.dash_logout):hover {
+    background-color: var(--cor-hover);
+}
+
+.telas button:focus {
+    outline: 2px solid var(--cor-borda-escura);
+    outline-offset: 1px;
+}
+
+@media (max-width: 400px) {
+    .tela_.visivel {
+        min-width: 90vw;
+        padding: 16px;
+    }
+
+    .telas h1 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+    .telas input {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .tela_login button {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .icone {
+        left: 88%;
+    }
+}
