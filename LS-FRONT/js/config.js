@@ -1,7 +1,10 @@
 const hostLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+const URL_PRODUCAO_BACKEND = "https://sys-login-site-production.up.railway.app";
+
 const API_URL = hostLocal
-    ? `${window.location.protocol}//${window.location.hostname}:3000`
-    : window.location.origin;
+    ? `http://${window.location.hostname}:3000`
+    : URL_PRODUCAO_BACKEND;
 
 const CONFIG = {
     API_URL: API_URL,
