@@ -4,4 +4,4 @@ Frontend - Netlify.
 Backend - Railway.
 Banco de dados - Railway.
 
-Infelizmente o plano do Railway acabou, limitando o projeto a apenas codigo e o site está desativado.
+Infelizmente o plano do Railway acabou, limitando o projeto a apenas codigo e o site está desativado no momento.
